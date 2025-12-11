@@ -6,7 +6,7 @@
 
 A BLE keyboard controller for M5Stack AtomS3 that enables wireless page turning on Kobo e-readers.
 
-![Kobo Page Turner](docs/IMG_8010.jpeg)
+[![Kobo Page Turner Demo](https://img.youtube.com/vi/eM09SAnKHLA/0.jpg)](https://www.youtube.com/watch?v=eM09SAnKHLA)
 
 ## Author
 
@@ -116,3 +116,4 @@ You can modify these settings in the code:
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
+

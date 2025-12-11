@@ -15,6 +15,9 @@ Morten Teinum (morten.teinum@gmail.com)
 ## Hardware
 
 - **Device**: M5Stack AtomS3
+- **MCU**: ESP32-S3 FN8
+- **Dimensions**: 24.0 x 24.0 x 12.9mm
+- **Weight**: 6.9g
 - **Connection**: Bluetooth Low Energy (BLE)
 
 ## Features

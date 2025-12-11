@@ -27,7 +27,38 @@ Morten Teinum (morten.teinum@gmail.com)
 
 ## Setup
 
-### Prerequisites
+### Method 1: Pre-compiled Firmware (Easiest)
+
+Download the latest firmware from [Releases](https://github.com/mteinum/kobo-page-turner/releases)
+
+#### Using esptool (Command Line)
+```bash
+pip install esptool
+
+# Flash all three binary files
+esptool.py --chip esp32s3 --port /dev/ttyUSB0 --baud 921600 write_flash -z \
+  0x0 kobo-page-turner.ino.bootloader.bin \
+  0x8000 kobo-page-turner.ino.partitions.bin \
+  0x10000 kobo-page-turner.ino.bin
+```
+
+**Note**: Replace `/dev/ttyUSB0` with your port:
+- Linux: `/dev/ttyUSB0` or `/dev/ttyACM0`
+- macOS: `/dev/cu.usbserial-*` or `/dev/cu.wchusbserial*`
+- Windows: `COM3`, `COM4`, etc.
+
+#### Using ESP Flash Download Tool (Windows)
+1. Download [Espressif Flash Download Tool](https://www.espressif.com/en/support/download/other-tools)
+2. Select ESP32-S3
+3. Load the binary files:
+   - `0x0` → `kobo-page-turner.ino.bootloader.bin`
+   - `0x8000` → `kobo-page-turner.ino.partitions.bin`
+   - `0x10000` → `kobo-page-turner.ino.bin`
+4. Select your COM port and click "Start"
+
+### Method 2: Build from Source
+
+#### Prerequisites
 
 1. Install Arduino IDE or Arduino CLI
 2. Install ESP32 board support

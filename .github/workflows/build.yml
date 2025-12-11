@@ -20,11 +20,30 @@ jobs:
     
     - name: Setup Arduino CLI
       uses: arduino/setup-arduino-cli@v1
+    
+    - name: Cache Arduino ESP32 platform
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.arduino15/packages/esp32
+          ~/.arduino15/staging/packages
+        key: ${{ runner.os }}-arduino-esp32-${{ hashFiles('**/build.yml') }}
+        restore-keys: |
+          ${{ runner.os }}-arduino-esp32-
       
     - name: Install ESP32 platform
       run: |
         arduino-cli core update-index
         arduino-cli core install esp32:esp32
+    
+    - name: Cache Arduino libraries
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/Arduino/libraries
+        key: ${{ runner.os }}-arduino-libs-${{ hashFiles('**/build.yml') }}
+        restore-keys: |
+          ${{ runner.os }}-arduino-libs-
         
     - name: Install required libraries
       run: |

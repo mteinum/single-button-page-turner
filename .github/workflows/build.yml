@@ -29,7 +29,7 @@ jobs:
         
     - name: Apply BLE Keyboard patch
       run: |
-        patch -p1 -d ~/Arduino/libraries/ESP32_BLE_Keyboard < patches/BleKeyboard.patch
+        patch -p1 -d ~/Arduino/libraries/ESP32-BLE-Keyboard < patches/BleKeyboard.patch
         
     - name: Compile sketch
       run: |

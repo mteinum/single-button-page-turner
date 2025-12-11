@@ -1,5 +1,9 @@
 # Kobo Page Turner
 
+[![Arduino Build](https://github.com/mteinum/kobo-page-turner/actions/workflows/build.yml/badge.svg)](https://github.com/mteinum/kobo-page-turner/actions/workflows/build.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/platform-ESP32-blue.svg)](https://www.espressif.com/en/products/socs/esp32)
+
 A BLE keyboard controller for M5Stack AtomS3 that enables wireless page turning on Kobo e-readers.
 
 ![Kobo Page Turner](docs/IMG_8010.jpeg)

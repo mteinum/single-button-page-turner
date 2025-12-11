@@ -79,15 +79,6 @@ cd ~/Arduino/libraries/ESP32-BLE-Keyboard
 patch -p1 < /path/to/kobo-page-turner/patches/BleKeyboard.patch
 ```
 
-#### Key Modifications
-
-The patch makes the following changes:
-- **Enhanced BLE Security**: Upgrades authentication to `ESP_LE_AUTH_REQ_SC_MITM_BOND` for better pairing security
-- **NimBLE Support**: Adds conditional compilation for NimBLE stack
-- **String Compatibility**: Fixes string initialization for device name and manufacturer
-- **Configurable Device IDs**: Adds methods to set vendor ID, product ID, and version
-- **Notification Management**: Properly handles BLE descriptor notifications
-
 <details>
 <summary>View complete patch content</summary>
 

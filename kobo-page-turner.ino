@@ -1,5 +1,5 @@
 /*
- * Kobo Page Turner - BLE Keyboard Controller for M5Stack AtomS3
+ * Single button page turner (SBPT) - BLE Keyboard Controller for M5Stack AtomS3
  * 
  * Author: Morten Teinum (morten.teinum@gmail.com)
  * Date: December 11, 2025
@@ -18,7 +18,7 @@
 // Config
 // =========================
 
-static const char* BLE_DEVICE_NAME = "Kobo PageTurner";
+static const char* BLE_DEVICE_NAME = "SBPT";
 
 const uint16_t LONG_PRESS_MS = 600;   // >= 600ms = previous page
 

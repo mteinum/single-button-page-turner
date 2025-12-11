@@ -1,4 +1,4 @@
-# Kobo Page Turner
+# Single button page turner (SBPT)
 
 [![Arduino Build](https://github.com/mteinum/kobo-page-turner/actions/workflows/build.yml/badge.svg)](https://github.com/mteinum/kobo-page-turner/actions/workflows/build.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -6,7 +6,7 @@
 
 A BLE keyboard controller for M5Stack AtomS3 that enables wireless page turning on Kobo e-readers.
 
-[![Kobo Page Turner Demo](https://img.youtube.com/vi/eM09SAnKHLA/0.jpg)](https://www.youtube.com/watch?v=eM09SAnKHLA)
+[![Single button page turner Demo](https://img.youtube.com/vi/eM09SAnKHLA/0.jpg)](https://www.youtube.com/watch?v=eM09SAnKHLA)
 
 ## Author
 

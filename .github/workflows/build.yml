@@ -58,12 +58,12 @@ jobs:
         
     - name: Compile sketch
       run: |
-        arduino-cli compile --fqbn esp32:esp32:m5stack_atoms3 --output-dir ./build kobo-page-turner.ino
+        arduino-cli compile --fqbn esp32:esp32:m5stack_atoms3 --output-dir ./build single-button-page-turner.ino
         
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: kobo-page-turner-firmware
+        name: single-button-page-turner-firmware
         path: |
           build/*.bin
           build/*.elf
@@ -73,11 +73,11 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          build/kobo-page-turner.ino.bin
-          build/kobo-page-turner.ino.bootloader.bin
-          build/kobo-page-turner.ino.partitions.bin
+          build/single-button-page-turner.ino.bin
+          build/single-button-page-turner.ino.bootloader.bin
+          build/single-button-page-turner.ino.partitions.bin
         body: |
-          ## Kobo Page Turner Firmware Release
+          ## Single Button Page Turner (SBPT) Firmware Release
           
           ### Installation Instructions
           
@@ -85,9 +85,9 @@ jobs:
           ```bash
           pip install esptool
           esptool.py --chip esp32s3 --port /dev/ttyUSB0 --baud 921600 write_flash -z \
-            0x0 kobo-page-turner.ino.bootloader.bin \
-            0x8000 kobo-page-turner.ino.partitions.bin \
-            0x10000 kobo-page-turner.ino.bin
+            0x0 single-button-page-turner.ino.bootloader.bin \
+            0x8000 single-button-page-turner.ino.partitions.bin \
+            0x10000 single-button-page-turner.ino.bin
           ```
           
           #### Using ESP Flash Download Tool:

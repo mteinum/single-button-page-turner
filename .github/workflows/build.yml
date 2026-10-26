@@ -34,7 +34,7 @@ jobs:
       uses: arduino/setup-arduino-cli@v1
     
     - name: Cache Arduino ESP32 platform
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: |
           ~/.arduino15/packages/esp32
@@ -49,7 +49,7 @@ jobs:
         arduino-cli core install esp32:esp32
     
     - name: Cache Arduino libraries
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: |
           ~/Arduino/libraries
